@@ -1,0 +1,22 @@
+<p>comp2 works!</p>
+<div>
+<p-steps [model]="page" [(activeIndex)]="activeIndex" ></p-steps>
+<p-tabMenu [model]="page"></p-tabMenu>
+</div>
+<div style="padding-bottom: 10px;">
+<form [formGroup]="userForm" (keydown.enter)="submit()">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" />
+    </div>
+     <div>
+      <label for="surname">lastname</label>
+      <input id="surname" type="text" formControlName="surname" />
+    </div>
+  </form>
+  
+  <button (click)="submit()">Submit</button>
+
+</div>
+
+  <p-breadcrumb [model]="page"></p-breadcrumb>
